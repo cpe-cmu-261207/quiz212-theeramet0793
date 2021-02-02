@@ -9,6 +9,11 @@ function App() {
       name: "Alice",
       gender: "male",
       age: "20"
+    },
+    {
+      name: "Chayanin Suatap 61063110",
+      gender: "male",
+      age: "50"
     }
   ];
   return (
@@ -16,7 +21,7 @@ function App() {
       {/* Code me please! */}
       <div class="mb-4">
         <h3 class="title is-3">ID Counter</h3>
-        <p>YOUR ID HERE</p>
+        <p>620610793</p>
         <button>-</button>
         <button>reset</button>
         <button>+</button>
@@ -35,6 +40,26 @@ function App() {
             <td>Bob</td>
             <td>male</td>
             <td>50</td>
+          </tr>
+          <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>Chayanin Suatap 61063110</td>
+            <td>male</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>Alice</td>
+            <td>male</td>
+            <td>20</td>
           </tr>
         </tbody>
       </table>
