@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { myComponent } from "./component/myComponent";
-const 
+const [myCourses] = useState([]);
 function App() {
   const persons = [
     {
@@ -64,9 +64,11 @@ function App() {
             <td>male</td>
             <td>20</td>
           </tr>
-          {myCourses.map(item => {
-          return <myComponent name ={item.name} grd = {item.gender} crd ={item.age}  />
-        })}
+          {myCourses.map((item) => {
+            return (
+              <myComponent name={item.name} grd={item.gender} crd={item.age} />
+            );
+          })}
         </tbody>
       </table>
     </div>
