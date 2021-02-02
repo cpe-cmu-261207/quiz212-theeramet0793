@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { myComponent } from "./component/myComponent";
+
 function App() {
   const persons = [
     {
@@ -37,9 +40,9 @@ function App() {
             <th>Age</th>
           </tr>
           <tr>
-            <td>Bob</td>
+            <td>Chayanin Suatap 61063110</td>
             <td>male</td>
-            <td>50</td>
+            <td>25</td>
           </tr>
           <tr>
             <th>Name</th>
@@ -47,9 +50,9 @@ function App() {
             <th>Age</th>
           </tr>
           <tr>
-            <td>Chayanin Suatap 61063110</td>
+            <td>Bob</td>
             <td>male</td>
-            <td>25</td>
+            <td>50</td>
           </tr>
           <tr>
             <th>Name</th>
