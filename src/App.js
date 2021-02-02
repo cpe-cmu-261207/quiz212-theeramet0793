@@ -65,7 +65,7 @@ function App() {
             <td>20</td>
           </tr>
           {myCourses.map(item => {
-          return <myComponent name ={item.name} grd = {item.grd} crd ={item.crd}  />
+          return <myComponent name ={item.name} grd = {item.gender} crd ={item.age}  />
         })}
         </tbody>
       </table>
