@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { myComponent } from "./component/myComponent";
-//const [myCourses] = useState([]);
 function App() {
   const persons = [
+    {
+      name: "Theeramet Metha 620610793",
+      gender: "male",
+      age: "20"
+    },
     {
       name: "Bob",
       gender: "male",
@@ -12,65 +15,52 @@ function App() {
       name: "Alice",
       gender: "male",
       age: "20"
-    },
-    {
-      name: "Chayanin Suatap 61063110",
-      gender: "male",
-      age: "50"
     }
   ];
+  const [id, setID] = useState(620610793);
   return (
     <div class="ml-2">
       {/* Code me please! */}
       <div class="mb-4">
         <h3 class="title is-3">ID Counter</h3>
-        <p>620610793</p>
-        <button>-</button>
-        <button>reset</button>
-        <button>+</button>
+        <p>{id}</p>
+        <button
+          onClick={() => {
+            setID(id - 1);
+          }}
+        >
+          -
+        </button>
+        <button onClick={() => setID(620610793)}>reset</button>
+        <button
+          onClick={() => {
+            setID(id + 1);
+          }}
+        >
+          +
+        </button>
       </div>
 
       {/* Convert me to a component! */}
       <h3 class="title is-3">Person List</h3>
-      <table class="table is-bordered mb-3">
-        <tbody>
-          <tr>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Age</th>
-          </tr>
-          <tr>
-            <td>Chayanin Suatap 61063110</td>
-            <td>male</td>
-            <td>25</td>
-          </tr>
-          <tr>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Age</th>
-          </tr>
-          <tr>
-            <td>Bob</td>
-            <td>male</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Age</th>
-          </tr>
-          <tr>
-            <td>Alice</td>
-            <td>male</td>
-            <td>20</td>
-          </tr>
-          {/* {myCourses.map((item) => {
-            return (
-              <myComponent name={item.name} grd={item.gender} crd={item.age} />
-            );
-          })} */}
-        </tbody>
-      </table>
+      {persons.map((person) => {
+        return (
+          <table class="table is-bordered mb-3">
+            <tbody>
+              <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+              </tr>
+              <tr>
+                <td>{person.name}</td>
+                <td>{person.gender}</td>
+                <td>{person.age}</td>
+              </tr>
+            </tbody>
+          </table>
+        );
+      })}
     </div>
   );
 }
